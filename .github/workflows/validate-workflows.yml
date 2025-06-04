@@ -22,50 +22,46 @@ jobs:
         python-version: '3.10'
     
     - name: Install dependencies
-      working-directory: ./lib
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install -e .
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Run workflow validation
       id: validate
-      working-directory: ./lib
       run: |
         # Run the validator on all JSON files in the repository
         # This will fail if any workflow is invalid
         echo "Validating all n8n workflows..."
-        if ! n8n-validate ..; then
+        if ! n8n-validate .; then
           echo "::error::One or more workflow validations failed"
           exit 1
         fi
         echo "All workflows are valid!"
-    
+
     - name: Create visualization artifacts
       if: always()  # Run this step even if validation fails
-      working-directory: ./lib
       run: |
         echo "Creating visualizations for all workflows..."
-        mkdir -p ../workflow-visualizations
-        
+        mkdir -p workflow-visualizations
+
         # Find all JSON files that might be n8n workflows
-        find .. -type f -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/workflow-visualizations/*" | while read -r file; do
+        find . -type f -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/workflow-visualizations/*" | while read -r file; do
           # Try to validate the file first
           if n8n-validate "$file" 2>/dev/null; then
             # If validation passes, create a visualization
             echo "Creating visualization for $file"
             filename=$(basename "$file" .json)
-            output_file="../workflow-visualizations/${filename}.png"
+            output_file="workflow-visualizations/${filename}.png"
             if ! n8n-visualize "$file" -o "$output_file" --no-show 2>/dev/null; then
               echo "::warning::Failed to create visualization for $file"
             fi
           fi
         done
-        
+
         # Count the number of visualizations created
-        VIS_COUNT=$(find ../workflow-visualizations -type f -name "*.png" | wc -l)
+        VIS_COUNT=$(find workflow-visualizations -type f -name "*.png" | wc -l)
         echo "Created $VIS_COUNT workflow visualizations"
-        
+
         # Set an output with the visualization count
         echo "visualization_count=$VIS_COUNT" >> $GITHUB_OUTPUT
     
@@ -87,7 +83,7 @@ jobs:
           const { execSync } = require('child_process');
           
           // Get the list of workflow files that were validated
-          const workflowFiles = execSync('find .. -type f -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/workflow-visualizations/*"')
+          const workflowFiles = execSync('find . -type f -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/workflow-visualizations/*"')
             .toString()
             .split('\n')
             .filter(Boolean);
@@ -95,7 +91,7 @@ jobs:
           // Count visualizations
           let visCount = 0;
           try {
-            visCount = fs.readdirSync('../workflow-visualizations').length;
+            visCount = fs.readdirSync('workflow-visualizations').length;
           } catch (e) {
             // Directory might not exist if no visualizations were created
           }
