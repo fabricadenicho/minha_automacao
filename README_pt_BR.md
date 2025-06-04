@@ -1,46 +1,47 @@
 # n8n_automations
-[Leia esta página em Português](README_pt_BR.md)
-This repository contains a collection of n8n automation templates sourced from the internet. These templates are designed to help automate a wide range of tasks and workflows using [n8n](https://n8n.partnerlinks.io/h1pwwf5m4toe), making it easier for users to discover and use ready-made automations for various platforms and services.
+[Leia este documento em inglês](README.md)
 
-👉 [Join n8n and start automating now! 💎](https://n8n.partnerlinks.io/h1pwwf5m4toe)
+Este repositório contém uma coleção de templates de automação do n8n encontrados na internet. Esses templates foram criados para ajudar a automatizar uma ampla gama de tarefas e fluxos de trabalho usando [n8n](https://n8n.partnerlinks.io/h1pwwf5m4toe), facilitando para os usuários descobrirem e utilizarem automações prontas para diversas plataformas e serviços.
+
+👉 [Participe do n8n e comece a automatizar agora! 💎](https://n8n.partnerlinks.io/h1pwwf5m4toe)
 <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe">
   <img src="/img/n8n.png" alt="n8n" style="max-height: 300px;">
 </a>
 
+---
+
+## Aviso
+Todos os templates de automação neste repositório foram encontrados on-line e são enviados aqui apenas para fácil acesso e compartilhamento. Nenhum dos templates foi criado ou é de propriedade do autor do repositório. Se você encontrar qualquer problema, erro ou dano resultante do uso desses templates, o autor do repositório não assume responsabilidade ou obrigação. Todos os direitos sobre os templates originais pertencem aos seus respectivos criadores.
 
 ---
 
-## Disclaimer
-All automation templates in this repository were found online and are uploaded here solely for easy access and sharing. None of the templates are created or owned by the repository author. If you encounter any issues, errors, or damages resulting from the use of these templates, the repository author assumes no responsibility or liability. All rights to the original templates belong to their respective creators.
-
----
-
-☕ Before diving into the long list of categories and templates, grab your coffee-and if you enjoy my work, don’t forget to buy me a coffee! 
+☕ Antes de mergulhar na longa lista de categorias e templates, pegue seu café — e, se você curtir meu trabalho, não se esqueça de me oferecer um café!
 
 <a href="https://buymeacoffee.com/enescingoz" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
---- 
+---
 
-## Categories & Template List
+## Categorias & Lista de Templates
 
 ---
 
-🤖 Want to translate, rewrite, and repost Twitter (X) threads automatically?
+🤖 Quer traduzir, reescrever e repostar threads do Twitter (X) automaticamente?
 
-Looking to effortlessly transform and publish entire Twitter (X) threads in multiple languages?  
-Check out my [n8n](https://n8n.partnerlinks.io/h1pwwf5m4toe) Twitter Thread (Flood) Translator & Poster workflow—it automates extraction, translation, rewriting, and posting in one seamless process.  
-Perfect for creators, marketers, and anyone aiming to reach new audiences with minimal effort and ultra-low cost!
+Procurando transformar e publicar facilmente threads inteiras do Twitter (X) em vários idiomas?
+Confira meu workflow [n8n](https://n8n.partnerlinks.io/h1pwwf5m4toe) Twitter Thread (Flood) Translator & Poster — ele automatiza a extração, tradução, reescrita e postagem em um processo único.
+Perfeito para criadores, profissionais de marketing e qualquer pessoa que queira alcançar novos públicos com mínimo esforço e custo baixíssimo!
 
-👉 [Try the workflow here](https://n8n.io/workflows/4233-translate-and-repost-twitter-threads-in-multiple-languages-with-openai/)
+👉 [Experimente o workflow aqui](https://n8n.io/workflows/4233-translate-and-repost-twitter-threads-in-multiple-languages-with-openai/)
+
+---
+
+## 🧵 Se você quer fazer scraping de threads do Twitter (X), confira este workflow
+
+Deseja extrair e mesclar threads completas do Twitter (X) de forma rápida e econômica?
+Conheça meu [n8n Twitter Thread Fetcher workflow](https://n8n.io/workflows/4088-extract-and-merge-twitter-x-threads-using-twitterapiio/) — ele é rapidíssimo, econômico e perfeito para automatizar a extração de threads do Twitter para pesquisa, curadoria de conteúdo ou arquivamento!
 
 ---
 
-## 🧵 If you want to scrape Twitter (X) threads, definitely check this workflow
-
-Looking to extract and merge entire Twitter (X) threads quickly and affordably?  
-Check out my [n8n Twitter Thread Fetcher workflow](https://n8n.io/workflows/4088-extract-and-merge-twitter-x-threads-using-twitterapiio/)-it’s lightning-fast, cost-effective, and perfect for automating Twitter thread extraction for research, content curation, or archiving!
-
----
 
 ### **Gmail & Email Automation**
 
